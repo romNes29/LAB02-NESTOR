@@ -23,7 +23,7 @@ namespace LABOR_2
 
         private void PantallaRegistrar_Load(object sender, EventArgs e)
         {
-
+            validaFranja();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -39,12 +39,43 @@ namespace LABOR_2
             string apellidoDos = txtSegundoApellido.Text;
             string edad = txtEdad.Text;
             string tipoCargo = txtCargo.Text;
-            double horasTrabajadas = double.Parse(txtHorasDia.Text);
+            double horasDiaTrabajadas = double.Parse(txtHorasDia.Text);
+            double horasNocheTrabajadas = double.Parse(txtHorasNoche.Text);
             string franja = cbxPuesto.SelectedItem.ToString();
-            procesos.registrarTrabajador(identificacion, nombre, apellidoUno, apellidoDos,edad, tipoCargo, horasTrabajadas, franja);
+            if (validaFranja() == true)
+            {
+                procesos.registrarTrabajador(identificacion, nombre, apellidoUno, apellidoDos, edad, tipoCargo, horasDiaTrabajadas, horasNocheTrabajadas, franja);
+            }
+           
+        }
 
-
-
+        public bool validaFranja()
+        {
+           
+            bool aprobar = false;
+            if (cbxPuesto.SelectedItem.ToString().Equals("Diurna"))
+            {
+                
+                txtHorasNoche.Enabled = false;
+                txtHorasNoche.Text = "0";
+                aprobar = true;
+            }
+            else if (cbxPuesto.SelectedItem.ToString().Equals("Nocturna"))
+            {
+                txtHorasDia.Enabled = false;
+                txtHorasDia.Text = "0";
+                aprobar = true;
+            }
+            else if (cbxPuesto.SelectedItem.ToString().Equals(""))
+            {
+                MessageBox.Show("POR FAVOR SELECCIONE UNA OPCIÓN.");
+                aprobar = false;
+            }
+            else
+            {
+                aprobar = true;
+            }
+            return aprobar;
         }
     }
 }

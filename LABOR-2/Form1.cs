@@ -19,7 +19,8 @@ namespace LABOR_2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show("PROFE\nTuve problemas con la electricidad, se me fue en medio desarrollo del Lab, es por eso\n" +
+                "que la mayoria de procesos quedaron a medias. Lo siento :(");
         }
 
         private void btnRegistrarTrabajador_Click(object sender, EventArgs e)
@@ -29,6 +30,14 @@ namespace LABOR_2
             Form1 f1 = new Form1();
             f1.Visible = false;
 
+        }
+
+        private void btnDatosPlanilla_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("POR FAVOR INGRESE EL NUMERO DE IDENTIFICACION DEL USUARIO");
+            DatosTrabajador oDatosTrabajador = new DatosTrabajador();
+            oDatosTrabajador.Show();
+            //oDatosTrabajador.Visible = true;
         }
     }
 }

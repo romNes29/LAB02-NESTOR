@@ -36,10 +36,10 @@ namespace Datos
             get { return this.horasDiaTrabajadas; }
             set { this.horasDiaTrabajadas = value; }
         }
-        public double HorasDiaTrabajadas
+        public double HorasNocheTrabajadas
         {
-            get { return this.horasDiaTrabajadas; }
-            set { this.horasDiaTrabajadas = value; }
+            get { return this.horasNocheTrabajadas; }
+            set { this.horasNocheTrabajadas = value; }
         }
         public string Franja
         {

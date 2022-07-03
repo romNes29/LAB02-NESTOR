@@ -13,6 +13,7 @@ namespace Datos
 
         public Duenno()
         {
+
         }
 
         public Duenno(string identificacion, string nombre, string primerApellido, string segundoApellido, string edad, string cargoAdministrativo, int cantidadAcciones) : base(identificacion, nombre, primerApellido, segundoApellido, edad)
