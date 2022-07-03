@@ -22,5 +22,13 @@ namespace LABOR_2
 
         }
 
+        private void btnRegistrarTrabajador_Click(object sender, EventArgs e)
+        {
+            PantallaRegistrar pr = new PantallaRegistrar();
+            pr.Visible = true;
+            Form1 f1 = new Form1();
+            f1.Visible = false;
+
+        }
     }
 }

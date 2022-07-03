@@ -28,13 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnRegistrarTrabajador = new System.Windows.Forms.Button();
+            this.btnDatosPlanilla = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnRegistrarTrabajador
+            // 
+            this.btnRegistrarTrabajador.Location = new System.Drawing.Point(143, 58);
+            this.btnRegistrarTrabajador.Name = "btnRegistrarTrabajador";
+            this.btnRegistrarTrabajador.Size = new System.Drawing.Size(130, 52);
+            this.btnRegistrarTrabajador.TabIndex = 0;
+            this.btnRegistrarTrabajador.Text = "RegistrarTrabajador";
+            this.btnRegistrarTrabajador.UseVisualStyleBackColor = true;
+            this.btnRegistrarTrabajador.Click += new System.EventHandler(this.btnRegistrarTrabajador_Click);
+            // 
+            // btnDatosPlanilla
+            // 
+            this.btnDatosPlanilla.Location = new System.Drawing.Point(330, 58);
+            this.btnDatosPlanilla.Name = "btnDatosPlanilla";
+            this.btnDatosPlanilla.Size = new System.Drawing.Size(130, 52);
+            this.btnDatosPlanilla.TabIndex = 1;
+            this.btnDatosPlanilla.Text = "RegistrarTrabajador";
+            this.btnDatosPlanilla.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(498, 58);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(130, 52);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "RegistrarTrabajador";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnDatosPlanilla);
+            this.Controls.Add(this.btnRegistrarTrabajador);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -43,6 +77,10 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnRegistrarTrabajador;
+        private System.Windows.Forms.Button btnDatosPlanilla;
+        private System.Windows.Forms.Button button2;
     }
 }
 
