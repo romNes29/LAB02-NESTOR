@@ -9,16 +9,18 @@ namespace Datos
     public class Trabajador : Persona
     {
         private string tipoCargo;
-        private double horasTrabajadas;
+        private double horasDiaTrabajadas;
+        private double horasNocheTrabajadas;
         private string franja;
         public Trabajador()
         {
         }
 
-        public Trabajador(string identificacion, string nombre, string primerApellido, string segundoApellido, string edad, string tipoCargo, double horasTrabajadas, string franja) : base(identificacion, nombre, primerApellido, segundoApellido, edad)
+        public Trabajador(string identificacion, string nombre, string primerApellido, string segundoApellido, string edad, string tipoCargo, double horasDiaTrabajadas, double horasNocheTrabajadas, string franja) : base(identificacion, nombre, primerApellido, segundoApellido, edad)
         {
             this.tipoCargo = tipoCargo;
-            this.horasTrabajadas = horasTrabajadas;
+            this.horasDiaTrabajadas = horasDiaTrabajadas;
+            this.horasNocheTrabajadas = horasNocheTrabajadas;
             this.franja = franja;
         }
     
@@ -29,12 +31,16 @@ namespace Datos
             set { this.tipoCargo = value; } 
         }
 
-        public double HorasTrabajadas
+        public double HorasDiaTrabajadas
         {
-            get { return this.horasTrabajadas; }
-            set { this.horasTrabajadas = value; }
+            get { return this.horasDiaTrabajadas; }
+            set { this.horasDiaTrabajadas = value; }
         }
-
+        public double HorasDiaTrabajadas
+        {
+            get { return this.horasDiaTrabajadas; }
+            set { this.horasDiaTrabajadas = value; }
+        }
         public string Franja
         {
             get { return this.franja; }
